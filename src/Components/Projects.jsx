@@ -9,6 +9,8 @@ import MercadoLiebreImg from '/assets/img/ml.png'
 import ViridisImg from '/assets/img/viridis.png'
 import CitasImg from '/assets/img/citas.png'
 import GastosImg from '/assets/img/gastos.png'
+import CriptoImg from '/assets/img/Cripto.png'
+
 
 
 
@@ -36,7 +38,7 @@ const Projects = () => {
     const [stateViridis, setStateViridis] = useState(false);
     const [stateCitas, setStateCitas] = useState(false);
     const [stateGastos, setStateGastos] = useState(false);
-
+    const [stateCripto, setStateCripto] = useState(false)
    
     const handleSearch = () => {
         setStateSearch(true)
@@ -82,6 +84,14 @@ const Projects = () => {
 
       const handleOutGastos = () => {
         setStateGastos(false)
+       }
+
+       const handleCripto = () => {
+        setStateCripto(true)
+      }
+
+      const handleOutCripto = () => {
+        setStateCripto(false)
        }
     
 
@@ -236,6 +246,30 @@ const Projects = () => {
                     <a
                     target="_blank"
                     href="https://github.com/BrunoGN91/Agenda-de-gastos"><img src={GithubIcon} alt="" /></a>
+                </div>
+                </div>
+            </li>
+            <li
+            onMouseOver={handleCripto}
+            onMouseLeave={handleOutCripto}
+            >
+            <p>Cotizador de Cripto</p>
+                <Project 
+                proyectImg={CriptoImg}
+                proyectUrl={`https://cripto-currency.netlify.app/`}
+                />
+                <div className='proyects_icons_all'>
+                <div className={stateCripto ? "proyect_icons_animation" : 'no'}>
+                    <img src={JsIcon} alt="" />
+                    <img src={ReactIcon} alt="" />
+                    <img src={CssIcon} alt="" />
+                    <img src={HtmlIcon} alt="" />
+                </div>
+                <div
+                className={stateCripto ? "proyect_icons_animation_github" : 'no'}>
+                    <a
+                    target="_blank"
+                    href="https://github.com/BrunoGN91/Cripto-currency"><img src={GithubIcon} alt="" /></a>
                 </div>
                 </div>
             </li>
