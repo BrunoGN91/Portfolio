@@ -99,7 +99,7 @@ const Projects = () => {
 
   return (
       <>
-      <h2 className='projects_title'>Projectos</h2>
+      <h2 className='projects_title'>Proyects</h2>
     <div className='projects'>
         <ul>
             <li
