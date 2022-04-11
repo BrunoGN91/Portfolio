@@ -10,6 +10,8 @@ import ViridisImg from '/assets/img/viridis.png'
 import CitasImg from '/assets/img/citas.png'
 import GastosImg from '/assets/img/gastos.png'
 import CriptoImg from '/assets/img/Cripto.png'
+import GuitarLa from '/assets/img/guitarLa.png'
+
 
 
 
@@ -28,6 +30,8 @@ import ReactIcon from '/assets/img/physics.png'
 import SequelizeIcon from '/assets/img/sequelize4.png'
 import NodeJsIcon from '/assets/img/nodejs.png'
 import GithubIcon from '/assets/img/github.png'
+import StrapiIcon from '/assets/img/strapi.png'
+
 
 
 const Projects = () => {
@@ -39,6 +43,8 @@ const Projects = () => {
     const [stateCitas, setStateCitas] = useState(false);
     const [stateGastos, setStateGastos] = useState(false);
     const [stateCripto, setStateCripto] = useState(false)
+    const [stateGuitar, setStateGuitar] = useState(false)
+
    
     const handleSearch = () => {
         setStateSearch(true)
@@ -89,12 +95,17 @@ const Projects = () => {
        const handleCripto = () => {
         setStateCripto(true)
       }
-
       const handleOutCripto = () => {
         setStateCripto(false)
+      }
+
+      const handleGuitar = () => {
+        setStateGuitar(true)
+       }
+       const handleOutGuitar = () => {
+        setStateGuitar(false)
        }
     
-
 
 
   return (
@@ -273,11 +284,36 @@ const Projects = () => {
                 </div>
                 </div>
             </li>
-            
+            <li
+            onMouseOver={handleGuitar}
+            onMouseLeave={handleOutGuitar}
+            >
+            <p>Cotizador de Cripto</p>
+                <Project 
+                proyectImg={GuitarLa}
+                proyectUrl={`https://guitarla-nz678g1uo-brunogn91.vercel.app/`}
+                />
+                <div className='proyects_icons_all'>
+                <div className={stateGuitar ? "proyect_icons_animation" : 'no'}>
+                    <img src={JsIcon} alt="" />
+                    <img src={ReactIcon} alt="" />
+                    <img src={CssIcon} alt="" />
+                    <img src={HtmlIcon} alt="" />
+                    <img src={StrapiIcon} alt="" />
+
+                </div>
+                <div
+                className={stateGuitar ? "proyect_icons_animation_github" : 'no'}>
+                    <a
+                    target="_blank"
+                    href="https://github.com/BrunoGN91/Guitar_Ecommerce"><img src={GithubIcon} alt="" /></a>
+                </div>
+                </div>
+            </li>
         </ul>
     </div>
     </>
   )
-}
+  }
 
 export default Projects
