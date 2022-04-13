@@ -113,6 +113,32 @@ const Projects = () => {
       <h2 className='projects_title'>Proyects</h2>
     <div className='projects'>
         <ul>
+        <li
+            onMouseOver={handleViridis}
+            onMouseLeave={handleOutViridis}
+            >
+            <p>Viridis: E-commerce</p>
+                <Project 
+                proyectImg={ViridisImg}
+                proyectUrl={`https://viridis-ecommerce.herokuapp.com/`}
+                />
+                <div className='proyects_icons_all'>
+                 <div className={stateViridis ? "proyect_icons_animation" : 'no'}>
+                    <img src={JsIcon} alt="" />
+                    <img src={MysqlIcon} alt="" />
+                    <img src={CssIcon} alt="" />
+                    <img src={HtmlIcon} alt="" />
+                    <img src={SequelizeIcon} alt="" />
+                    <img src={NodeJsIcon} alt="" />
+                </div>
+                <div
+                className={stateViridis ? "proyect_icons_animation_github" : 'no'}>
+                    <a
+                    target="_blank"
+                    href="https://github.com/FranMon1/Grupo_8_Viridis"><img src={GithubIcon} alt="" /></a>
+                </div>
+                </div>
+            </li>
             <li
             onMouseOver={handleSearch}
             onMouseLeave={handleOutSearch}
@@ -183,32 +209,6 @@ const Projects = () => {
                     <a
                     target="_blank"
                     href="https://github.com/BrunoGN91/MercadoLiebreBG"><img src={GithubIcon} alt="" /></a>
-                </div>
-                </div>
-            </li>
-            <li
-            onMouseOver={handleViridis}
-            onMouseLeave={handleOutViridis}
-            >
-            <p>Viridis: E-commerce</p>
-                <Project 
-                proyectImg={ViridisImg}
-                proyectUrl={`https://github.com/FranMon1/Grupo_8_Viridis`}
-                />
-                <div className='proyects_icons_all'>
-                 <div className={stateViridis ? "proyect_icons_animation" : 'no'}>
-                    <img src={JsIcon} alt="" />
-                    <img src={MysqlIcon} alt="" />
-                    <img src={CssIcon} alt="" />
-                    <img src={HtmlIcon} alt="" />
-                    <img src={SequelizeIcon} alt="" />
-                    <img src={NodeJsIcon} alt="" />
-                </div>
-                <div
-                className={stateViridis ? "proyect_icons_animation_github" : 'no'}>
-                    <a
-                    target="_blank"
-                    href="https://github.com/FranMon1/Grupo_8_Viridis"><img src={GithubIcon} alt="" /></a>
                 </div>
                 </div>
             </li>
